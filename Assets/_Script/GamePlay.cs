@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class GamePlay : GameScreen
 {
+	// by luxiaohen for test
     public GamePlay()
     {
     }

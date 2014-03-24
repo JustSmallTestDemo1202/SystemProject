@@ -10,6 +10,12 @@ public class MainMenu : GameScreen
     {
     }
 
+	public override void OnInit()
+	{
+		AddScreen<TaskScreen>();
+		AddScreen<FriendScreen>();
+	}
+
     public override void OnEnter(object param)
     {
         base.OnEnter(param);
@@ -26,6 +32,12 @@ public class MainMenu : GameScreen
         {
             Framework.ScreenManager.ChangeScreen(typeof(GamePlay));
         }
+
+		if (GUILayout.Button("changToTask"))
+		{
+			Framework.ScreenManager.ChangeScreen(typeof(TaskScreen));
+			ChangeScreen( typeof(TaskScreen) );
+		}
 
         GUILayout.EndArea();
     }

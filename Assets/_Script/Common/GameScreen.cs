@@ -127,7 +127,7 @@ public class GameScreen : MonoBehaviour
         OnScreenChanged();
     }
 
-    public void PopScreen(object param = null)
+    public void (object param = null)
     {
         if (CurrentScreen != null)
         {

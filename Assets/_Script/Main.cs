@@ -14,15 +14,21 @@ namespace IceFire
 
         public bool enableNet;
      //   static GameObject uiRoot;
-
+		MonsterInfoTable monsterInfo;
         void Awake()
         {
             //create game instance
             if (!Framework.HasInstance)
             {
                 Framework instance = Framework.Instance;
+				/*
+				monsterInfo = Resources.Load<MonsterInfoTable>("TableAssets/MonsterInfo");
 
+				MonsterInfo info = monsterInfo.GetById(1);
+				info.
+*/
                 Framework.AddComponent<DataCenter>();
+
                 Framework.ScreenManager.AddScreen<MainMenu>();
                 Framework.ScreenManager.AddScreen<GamePlay>();
                 /*
